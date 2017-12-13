@@ -8,7 +8,7 @@ use lts.gen.sh to generate key & ctr files
 use doc.sh to start godoc
 
 ## How to Test
-run:
-	cd test/
-	go test -v
+run:  
+	cd test/  
+	go test -v  
 then observes the logs
