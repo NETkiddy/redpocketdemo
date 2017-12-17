@@ -1,0 +1,12 @@
+<html>
+<head>
+<title>Send Page</title>
+</head>
+<body>
+<form action="/send" method="post">
+    金额:<input type = "text" name= "money" id = 'money' onkeyup= "if( ! /^(([1-9][0-9]*)|(([0]\.\d{0,2}|[1-9][0-9]*\.\d{0,2})))$/.test(value)){alert('只能输入数字，小数点后只能保留两位');this.value='';}" />
+    人数:<input type = "text" name= "count" id = 'count' onkeyup= "if(! /^[1-9]+$/.test(value)){alert('只能整数');this.value='';}" />
+    <input type="submit" value="发红包">
+</form>
+</body>
+</html>

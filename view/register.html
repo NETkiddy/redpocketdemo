@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function validate_required(field,alerttxt)
+{
+    with (field)
+    {
+        if (value==null||value=="")
+        {
+            alert(alerttxt);
+            return false;
+        }else {
+            return true;
+        }
+    }
+}
+function isequal_required(field1,field2,alerttxt)
+{
+        if (f1 != f2)
+        {
+            alert(alerttxt);
+            return false;
+        }else {
+            return true;
+        }
+}
+
+function validate_form(thisform)
+{
+    with (thisform)
+    {
+        if (validate_required(username,"username Empty Unaccepted")==false)
+            {username.focus();return false}
+        if (validate_required(password1,"password1 Empty Unaccepted")==false)
+            {password1.focus();return false}
+        if (validate_required(password2,"password2 Empty Unaccepted")==false)
+            {password2.focus();return false}
+        if (isequal_required(password1, password2,"password1 != password2")==false)
+            {password2.focus();return false}
+    }
+}
+</script>
+<title>Register Page</title>
+</head>
+<body>
+<form action="/register" onsubmit="return validate_form(this);" method="post">
+    用户名:<input type="text" name="username">
+    密码:<input type="password" name="password1">
+    确认密码:<input type="password" name="password2">
+    <input type="submit" value="登录">
+</form>
+</body>
+</html>
